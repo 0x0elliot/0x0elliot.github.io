@@ -7,7 +7,9 @@
     // Get the value of the redirect_url parameter
     const redirectUrl = urlParams.get('redirect_url');
 
-    // Redirect to the specified URL
-    window.location.href = redirectUrl;
+    console.log(window.top)
+
+    // Redirect the parent window to the specified URL
+    window.top.location.href = redirectUrl;
   }
 </script>
