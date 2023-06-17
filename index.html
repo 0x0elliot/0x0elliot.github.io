@@ -1,1 +1,13 @@
-<script>alert(location.href)</script>
+<script>
+  // Get the URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // Check if the redirect_url parameter exists
+  if (urlParams.has('redirect_url')) {
+    // Get the value of the redirect_url parameter
+    const redirectUrl = urlParams.get('redirect_url');
+
+    // Redirect to the specified URL
+    window.location.href = redirectUrl;
+  }
+</script>
